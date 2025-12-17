@@ -5,14 +5,21 @@ import Footer from '@/components/Footer';
 
 const BookingPage = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col">
       <Navigation />
-      <div className="pt-20">
+
+      <main className="pt-20 px-4 flex-1">
+        <h1 className="text-4xl font-bold text-center mb-12">
+          Book a Service
+        </h1>
+
         <BookingForm />
-      </div>
+      </main>
+
       <Footer />
     </div>
   );
 };
 
 export default BookingPage;
+
