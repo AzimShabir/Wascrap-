@@ -1,0 +1,97 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/src/main.tsx" as="script" crossorigin>
+    <link rel="preload" href="/src/index.css" as="style">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- DNS prefetch for external domains -->
+    <link rel="dns-prefetch" href="https://rdgonensumpfeurkqfvy.supabase.co">
+    <link rel="dns-prefetch" href="https://firestore.googleapis.com">
+    
+    <!-- SEO Meta Tags -->
+    <title>WASCRAP - Digital Scrap Collection Platform | Go Green Sustainably</title>
+    <meta name="description" content="India's first digital platform connecting scrap sellers directly with recyclers. Fair pricing, sustainable practices, and professional pickup services. Book your scrap pickup today!">
+    <meta name="keywords" content="scrap collection, waste management, recycling, digital platform, eco-friendly, sustainable, pickup service, India">
+    <meta name="author" content="WASCRAP" />
+    
+    <!-- Mobile Performance Optimizations -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Inline critical CSS for instant rendering -->
+    <style>
+      :root{--background:0 0% 100%;--foreground:222.2 84% 4.9%;--primary:142.1 76.2% 36.3%}*{border-color:hsl(var(--border));-webkit-transform:translateZ(0);transform:translateZ(0)}body{background-color:hsl(var(--background));color:hsl(var(--foreground));font-family:'Inter',system-ui,-apple-system,sans-serif;margin:0;padding:0;font-size:14px;line-height:1.4}@media(min-width:641px){body{font-size:16px;line-height:1.6}}.hero-skeleton{min-height:100vh;background:linear-gradient(135deg,#f0fdf4 0%,#ffffff 50%,#f0fdf4 100%);display:flex;align-items:center;justify-content:center}.hero-skeleton .container{max-width:1200px;margin:0 auto;padding:1rem;text-align:center}@media(min-width:768px){.hero-skeleton .container{padding:2rem}}.hero-skeleton h1{font-size:clamp(2.5rem,8vw,6rem);font-weight:900;margin-bottom:1rem;color:#1f2937}.hero-skeleton .brand{background:linear-gradient(135deg,#16a34a,#22c55e,#4ade80);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}button{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+    </style>
+    <!-- Open Graph Meta Tags -->
+    
+    
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://wascrap.com" />
+    <meta property="og:site_name" content="WASCRAP" />
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:car" content="summary_large_image" />
+    
+    
+    
+    <!-- Additional Meta Tags -->
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="1 days" />
+    <meta name="theme-color" content="#16a34a" />
+    <meta property="og:title" content="WASCRAP - Digital Scrap Collection Platform | Go Green Sustainably">
+  <meta name="twitter:title" content="WASCRAP - Digital Scrap Collection Platform | Go Green Sustainably">
+  <meta property="og:description" content="India&#39;s first digital platform connecting scrap sellers directly with recyclers. Fair pricing, sustainable practices, and professional pickup services. Book your scrap pickup today!">
+  <meta name="twitter:description" content="India&#39;s first digital platform connecting scrap sellers directly with recyclers. Fair pricing, sustainable practices, and professional pickup services. Book your scrap pickup today!">
+  <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/thhauY6BQmQPmmifUii7SQ73tSi1/social-images/social-1763367196560-Screenshot_20251117-133052.jpg">
+  <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/thhauY6BQmQPmmifUii7SQ73tSi1/social-images/social-1763367196560-Screenshot_20251117-133052.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+  <body>
+    <!-- Critical content shown immediately -->
+    <div id="initial-loader" class="hero-skeleton">
+      <div class="container">
+        <h1>WAS<span class="brand">CRAP</span></h1>
+        <p style="font-size: 1.25rem; color: #6b7280; margin-top: 1rem;">Loading sustainable waste management...</p>
+      </div>
+    </div>
+    
+    <div id="root"></div>
+    
+    <script>
+      // Remove loader when app is ready
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const loader = document.getElementById('initial-loader');
+          if (loader) loader.style.display = 'none';
+        }, 100);
+      });
+      
+      // Prefetch hover links
+      let prefetched = new Set();
+      document.addEventListener('mouseover', (e) => {
+        if (e.target.tagName === 'A' && !prefetched.has(e.target.href)) {
+          const link = document.createElement('link');
+          link.rel = 'prefetch';
+          link.href = e.target.href;
+          document.head.appendChild(link);
+          prefetched.add(e.target.href);
+        }
+      });
+    </script>
+    
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
