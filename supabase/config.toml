@@ -1,0 +1,22 @@
+project_id = "rdgonensumpfeurkqfvy"
+
+[functions.send-otp-email]
+verify_jwt = false
+
+[functions.verify-otp]
+verify_jwt = false
+
+[functions.get-user-email]
+verify_jwt = false
+
+[functions.send-notification-email]
+verify_jwt = false
+
+[functions.send-booking-notification]
+verify_jwt = false
+
+[functions.submit-partner-inquiry]
+verify_jwt = false
+
+[functions.firebase-auth]
+verify_jwt = false
