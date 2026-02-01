@@ -2,107 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-/* =====================================================
-   DESIGN SYSTEM — WASCRAP
-   All colors, spacing, radius, and semantics live here
-   ===================================================== */
+/* ===============================
+   WASCRAP DESIGN SYSTEM
+   =============================== */
 
 @layer base {
   :root {
-    /* Core surfaces */
     --background: 0 0% 100%;
     --foreground: 222 47% 11%;
 
     --card: 0 0% 100%;
     --card-foreground: 222 47% 11%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
-
-    /* Brand (Green) */
     --primary: 142 71% 35%;
     --primary-foreground: 0 0% 100%;
 
-    /* Neutral layers */
     --secondary: 210 40% 96%;
     --secondary-foreground: 222 47% 11%;
 
     --muted: 210 40% 96%;
     --muted-foreground: 215 16% 47%;
 
-    --accent: 210 40% 96%;
-    --accent-foreground: 222 47% 11%;
-
-    /* States */
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
-
-    /* Borders & inputs */
     --border: 214 32% 91%;
     --input: 214 32% 91%;
     --ring: 142 71% 35%;
 
-    /* Radius */
     --radius: 0.75rem;
-
-    /* Sidebar */
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5% 26%;
-    --sidebar-primary: 142 71% 35%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 5% 96%;
-    --sidebar-accent-foreground: 240 6% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 142 71% 35%;
   }
 
-  /* =========================
-     DARK MODE
-     ========================= */
   .dark {
     --background: 222 47% 11%;
     --foreground: 210 40% 98%;
-
     --card: 222 47% 11%;
     --card-foreground: 210 40% 98%;
-
-    --popover: 222 47% 11%;
-    --popover-foreground: 210 40% 98%;
-
     --primary: 142 71% 45%;
-    --primary-foreground: 222 47% 11%;
-
-    --secondary: 217 33% 18%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217 33% 18%;
-    --muted-foreground: 215 20% 65%;
-
-    --accent: 217 33% 18%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
-
     --border: 217 33% 18%;
     --input: 217 33% 18%;
-    --ring: 142 71% 45%;
-
-    --sidebar-background: 240 6% 10%;
-    --sidebar-foreground: 240 5% 96%;
-    --sidebar-primary: 142 71% 45%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 4% 16%;
-    --sidebar-accent-foreground: 240 5% 96%;
-    --sidebar-border: 240 4% 16%;
-    --sidebar-ring: 142 71% 45%;
   }
-}
 
-/* =====================================================
-   BASE ELEMENTS
-   ===================================================== */
-@layer base {
   * {
     @apply border-border;
   }
@@ -112,43 +49,36 @@
     line-height: 1.6;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4 {
     @apply font-semibold tracking-tight;
   }
 
   h1 { @apply text-2xl md:text-3xl; }
   h2 { @apply text-xl md:text-2xl; }
-  h3 { @apply text-lg md:text-xl; }
+  h3 { @apply text-lg; }
 }
 
-/* =====================================================
+/* ===============================
    UTILITIES
-   ===================================================== */
+   =============================== */
+
 @layer utilities {
-  .text-shadow-soft {
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
-  }
-
-  .glass-effect {
-    backdrop-filter: blur(12px);
-    background-color: hsl(var(--background) / 0.85);
-  }
-
   .safe-tap {
     min-height: 44px;
     min-width: 44px;
   }
+
+  .glass-effect {
+    backdrop-filter: blur(12px);
+    background-color: hsl(var(--background) / 0.9);
+  }
 }
 
-/* =====================================================
-   MOBILE OPTIMIZATION (SAFE)
-   ===================================================== */
-@media (max-width: 768px) {
-  html {
-    -webkit-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-  }
+/* ===============================
+   MOBILE OPTIMIZATION
+   =============================== */
 
+@media (max-width: 768px) {
   body {
     font-size: 14px;
     line-height: 1.5;
@@ -157,133 +87,16 @@
   input,
   textarea,
   select {
-    font-size: 16px; /* Prevent iOS zoom */
-  }
-
-  .grid {
-    gap: 0.75rem;
+    font-size: 16px;
   }
 }
 
-/* =====================================================
-   TOUCH & INTERACTION
-   ===================================================== */
+/* ===============================
+   TOUCH OPTIMIZATION
+   =============================== */
+
 button,
-a,
-.cursor-pointer {
+a {
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
-}    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-
-  body {
-    @apply bg-background text-foreground font-sans antialiased;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-heading;
-  }
-
-  .font-display {
-    font-family: 'Playfair Display', Georgia, serif;
-  }
-}
-
-/* Custom utility classes */
-@layer utilities {
-  .text-shadow {
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-
-  .glass-effect {
-    backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.9);
-  }
-}
-
-/* Mobile Performance Optimizations */
-@media (max-width: 768px) {
-  * {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-  }
-  
-  .hero-skeleton {
-    will-change: auto;
-  }
-  
-  /* Reduce animations on mobile for better performance */
-  .animate-pulse, .animate-bounce, .animate-spin-slow {
-    animation-duration: 3s !important;
-  }
-
-  /* Mobile-specific optimizations */
-  html {
-    -webkit-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-  }
-
-  body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  /* Improve input usability on mobile */
-  input, textarea, select {
-    font-size: 16px !important; /* Prevents zoom on iOS */
-  }
-
-  /* Optimize card layouts for mobile */
-  .grid {
-    gap: 0.75rem;
-  }
-}
-
-/* Touch optimizations */
-button, .cursor-pointer, a {
-  touch-action: manipulation;
-  -webkit-tap-highlight-color: transparent;
-  min-height: 44px; /* Ensure minimum touch target size */
-  min-width: 44px;
-}
-
-/* Optimize font loading for mobile */
-@media (max-width: 640px) {
-  body {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-
-  h1 {
-    font-size: 1.75rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  h3 {
-    font-size: 1.25rem;
-  }
 }
