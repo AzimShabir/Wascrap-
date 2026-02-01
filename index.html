@@ -1,74 +1,120 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="manifest" href="/manifest.json" />
+<head>
+  <!-- Basic -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Title & SEO -->
+  <title>WASCRAP — Smart & Sustainable Scrap Collection</title>
+  <meta name="description" content="WASCRAP is a digital scrap collection platform connecting households and businesses with verified recyclers. Easy pickup, fair pricing, and sustainable recycling across India." />
+  <meta name="keywords" content="scrap pickup, recycling, waste management, eco friendly, scrap buyers India" />
+  <meta name="author" content="WASCRAP" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="English" />
+  <meta name="theme-color" content="#15803d" />
 
-    <!-- Preconnect -->
-    <link rel="preconnect" href="https://rdgonensumpfeurkqfvy.supabase.co" crossorigin>
+  <!-- Favicon & PWA -->
+  <link rel="icon" type="image/png" href="/favicon.ico" />
+  <link rel="manifest" href="/manifest.json" />
 
-    <!-- SEO -->
-    <title>WASCRAP — Smart & Sustainable Scrap Collection</title>
-    <meta name="description" content="WASCRAP is a digital scrap collection platform connecting households and businesses with verified recyclers. Easy pickup, fair pricing, and sustainable recycling across India.">
-    <meta name="keywords" content="scrap pickup, recycling, waste management, eco friendly, scrap buyers India">
-    <meta name="author" content="WASCRAP">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="WASCRAP">
-    <meta property="og:url" content="https://wascrap.com">
-    <meta property="og:title" content="WASCRAP — Smart & Sustainable Scrap Collection">
-    <meta property="og:description" content="Book scrap pickup online and contribute to a greener India with WASCRAP.">
-    <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/thhauY6BQmQPmmifUii7SQ73tSi1/social-images/social-1763367196560-Screenshot_20251117-133052.jpg">
+  <!-- Preconnect (Backend) -->
+  <link rel="preconnect" href="https://rdgonensumpfeurkqfvy.supabase.co" crossorigin />
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="WASCRAP — Smart & Sustainable Scrap Collection">
-    <meta name="twitter:description" content="Digital scrap collection platform for homes & businesses in India.">
-    <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/thhauY6BQmQPmmifUii7SQ73tSi1/social-images/social-1763367196560-Screenshot_20251117-133052.jpg">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="WASCRAP" />
+  <meta property="og:url" content="https://wascrap.com" />
+  <meta property="og:title" content="WASCRAP — Smart & Sustainable Scrap Collection" />
+  <meta property="og:description" content="Book scrap pickup online and contribute to a greener India with WASCRAP." />
+  <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/thhauY6BQmQPmmifUii7SQ73tSi1/social-images/social-1763367196560-Screenshot_20251117-133052.jpg" />
 
-    <!-- Theme -->
-    <meta name="theme-color" content="#15803d">
-    <meta name="robots" content="index, follow">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="WASCRAP — Smart & Sustainable Scrap Collection" />
+  <meta name="twitter:description" content="Digital scrap collection platform for homes & businesses in India." />
+  <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/thhauY6BQmQPmmifUii7SQ73tSi1/social-images/social-1763367196560-Screenshot_20251117-133052.jpg" />
 
-    <!-- Critical CSS -->
-    <style>
-      :root {
-        --bg: #ffffff;
-        --fg: #0f172a;
-        --muted: #64748b;
-        --primary: #15803d;
-        --primary-light: #dcfce7;
-        --border: #e5e7eb;
+  <!-- Critical CSS (Loader Only) -->
+  <style>
+    :root {
+      --primary: #15803d;
+      --muted: #64748b;
+      --bg: #ffffff;
+      --fg: #0f172a;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .initial-loader {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #ecfdf5 0%, #ffffff 60%);
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    .brand {
+      font-size: clamp(2.5rem, 7vw, 5rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin: 0;
+    }
+
+    .brand span {
+      color: var(--primary);
+    }
+
+    .tagline {
+      margin-top: 1rem;
+      font-size: 1.125rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Initial Loader -->
+  <div id="initial-loader" class="initial-loader">
+    <div>
+      <h1 class="brand">WAS<span>CRAP</span></h1>
+      <p class="tagline">Building a cleaner, smarter & sustainable recycling ecosystem</p>
+    </div>
+  </div>
+
+  <!-- React Mount -->
+  <div id="root"></div>
+
+  <!-- Remove Loader After App Load -->
+  <script>
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('initial-loader');
+      if (loader) {
+        setTimeout(() => loader.remove(), 120);
       }
+    });
+  </script>
 
-      * {
-        box-sizing: border-box;
-      }
+  <!-- App Entry -->
+  <script type="module" src="/src/main.tsx"></script>
 
-      body {
-        margin: 0;
-        font-family: 'Inter', system-ui, -apple-system, sans-serif;
-        background: var(--bg);
-        color: var(--fg);
-        line-height: 1.6;
-        -webkit-font-smoothing: antialiased;
-      }
-
-      .hero-skeleton {
-        min-height: 100vh;
-        background: linear-gradient(135deg, #ecfdf5 0%, #ffffff 60%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 1.5rem;
+</body>
+</html>        padding: 1.5rem;
       }
 
       .hero-container {
