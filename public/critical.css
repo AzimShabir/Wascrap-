@@ -4,23 +4,37 @@
   --foreground: 222.2 84% 4.9%;
   --primary: 142.1 76.2% 36.3%;
   --primary-foreground: 355.7 100% 97.3%;
+  --border: 214.3 31.8% 91.4%;
 }
 
-* {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   border-color: hsl(var(--border));
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  margin: 0;
-  padding: 0;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 .hero-skeleton {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 50%, #f0fdf4 100%);
+  min-height: 100svh; /* better on mobile than 100vh */
+  background: linear-gradient(
+    135deg,
+    #f0fdf4 0%,
+    #ffffff 50%,
+    #f0fdf4 100%
+  );
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,13 +42,25 @@ body {
 
 .hero-skeleton .container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin-inline: auto;
   padding: 2rem;
   text-align: center;
 }
 
 .hero-skeleton h1 {
   font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 900;
+  margin-bottom: 1rem;
+  line-height: 1.05;
+  color: #1f2937;
+}
+
+.hero-skeleton .brand {
+  background: linear-gradient(135deg, #16a34a, #22c55e, #4ade80);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}  font-size: clamp(3rem, 8vw, 6rem);
   font-weight: 900;
   margin-bottom: 1rem;
   color: #1f2937;
